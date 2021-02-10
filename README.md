@@ -1,6 +1,6 @@
 # LSM9DS1-AHRS
 
-Mahony AHRS and Tilt Compensated Compass for the LSM9DS1 sensor, written and tested for the Adafruit LSM9DS1 breakout board, using I2C connection.
+Mahony AHRS and Tilt Compensated Compass for Arduino and the LSM9DS1 sensor, written and tested for the Adafruit LSM9DS1 breakout board, using I2C connection.
 Because of the way the Adafruit board is constructed and marked, it is convenient to take the marked Y axis as pointing True North.  Correct for local magnetic declination is included in the code.
 
 Note: The standard sensor orientation for AHRS Tait-Bryan angles is X North Y West and Z Up (NWU system)
