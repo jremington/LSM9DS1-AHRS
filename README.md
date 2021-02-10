@@ -3,9 +3,9 @@
 Mahony AHRS and Tilt Compensated Compass for the LSM9DS1 sensor, written and tested for the Adafruit LSM9DS1 breakout board, using I2C connection.
 Because of the way the Adafruit board is constructed and marked, it is convenient to take the marked Y axis as pointing True North.  Correct for local magnetic declination is included in the code.
 
-The Sparkfun LSM9DS1 Arduino library is required. Only the default settings and raw sensor data are used.
-
 Note: The standard sensor orientation for AHRS Tait-Bryan angles is X North Y West and Z Up (NWU system)
+
+The Sparkfun LSM9DS1 Arduino library is required. Only the default settings and raw sensor data are used.
 
 The currently implemented AHRS algorithm is the standard Madgwick/Mahony scheme found in other repositories. However, new features have been added, such as code to simplify accurate calibration of the accelerometer, magnetometer and gyro. The magnetometer and accelerometer axes are realigned so that the output orientation is meaningful, and to simplify overall operation. 
 
