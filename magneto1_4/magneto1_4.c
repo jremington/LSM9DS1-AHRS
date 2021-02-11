@@ -65,7 +65,7 @@ int main()
 
 // this version reads comma separated data
 
- printf("\r\nMagneto 1.3 4/24/2020\r\nInput .csv file? ");
+ printf("\r\nMagneto 1.4 2/10/2021\r\nInput .csv file? ");
  scanf("%s",&filename);
 
  fp = fopen(filename, "r");
