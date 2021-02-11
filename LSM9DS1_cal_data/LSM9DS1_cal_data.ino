@@ -96,7 +96,7 @@ void loop()
   static int n = 0; //count values transmitted
   // Update the sensor values whenever new data is available
 
-  if ( imu.accelAvailable() )
+  if ( imu.accelAvailable() ) 
   {
     // To read from the accelerometer, first call the
     // readAccel() function. When it exits, it'll update the
