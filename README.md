@@ -11,7 +11,12 @@ The Sparkfun LSM9DS1 Arduino library is required. Only the default settings and 
 The currently implemented AHRS algorithm is the standard Madgwick/Mahony scheme found in other repositories. However, new features have been added, such as code to simplify accurate calibration of the accelerometer, magnetometer and gyro. The magnetometer and accelerometer axes are realigned so that the output orientation is meaningful, and to simplify overall operation. 
 
 SENSOR CALIBRATION
-Magnetometer and accelerometer calibration is required. Approaches are described in this excellent blog article:
+
+Magnetometer and accelerometer calibration is required, each sensor individually. The Arduino program LSM9DS1_cal_data.ino collects gyro data and calculates the gyro offset (while the sensor is held still), then output 300 accelerometer and magnetometer data points, while the user slowly and carefully rotates the sensor in 3D.
+
+You then need to create two separate comma separated value (.csv) file, one each for the magnetometer and accelerometer x,y,z values, and use them for the final calibration steps.
+
+General magnetometer calibration approaches are described in this excellent blog article:
 
     http://sailboatinstruments.blogspot.com/2011/08/improved-magnetometer-calibration.html 
     
