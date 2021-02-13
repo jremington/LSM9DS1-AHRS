@@ -12,7 +12,7 @@ The currently implemented AHRS algorithm is the standard Madgwick/Mahony scheme 
 
 SENSOR CALIBRATION
 
-Magnetometer and accelerometer calibration is required, each sensor individually. The Arduino program LSM9DS1_cal_data.ino collects gyro data and calculates the gyro offset (while the sensor is held still), then output 300 accelerometer and magnetometer data points, while the user slowly and carefully rotates the sensor in 3D.
+Gyro, magnetometer and accelerometer calibration is required, for each sensor individually. The Arduino program LSM9DS1_cal_data.ino collects gyro data and calculates the gyro offset (while the sensor is held still), then output 300 accelerometer and magnetometer data points, while the user slowly and carefully rotates the sensor in 3D.
 
 You then need to create two separate comma separated value (.csv) file, one each for the magnetometer and accelerometer x,y,z values, and use them for the final calibration steps.
 
