@@ -16,13 +16,13 @@ Gyro, magnetometer and accelerometer calibration is required, for each sensor in
 
 You need to cut/paste/copy the output data on the serial monitor, then create two separate comma separated value (.csv) file, one each for the magnetometer and accelerometer x,y,z values, and use them for the final calibration steps.
 
-General magnetometer calibration approaches are described in this excellent blog article:
+General magnetometer calibration approaches are described in this excellent blog article: 
 
-    http://sailboatinstruments.blogspot.com/2011/08/improved-magnetometer-calibration.html 
-    
+http://sailboatinstruments.blogspot.com/2011/08/improved-magnetometer-calibration.html
+
 I also strongly recommend this blog post as a general guide to magnetometer/accelerometer calibration
 
-   https://thecavepearlproject.org/2015/05/22/calibrating-any-compass-or-accelerometer-for-arduino/
+https://thecavepearlproject.org/2015/05/22/calibrating-any-compass-or-accelerometer-for-arduino/
 
 Magneto is a fair sized C program that runs on a PC or a Mac (suggest to use Code::Blocks IDE on Windows). For convenience, I’ve collected all of the basic parts of magneto, described in the sailboatinstruments link, into one file that can be compiled and run on a desktop.
 
