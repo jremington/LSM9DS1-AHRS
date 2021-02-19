@@ -6,7 +6,7 @@ Standard orientation for the tilt-compensated compass: marked Y axis points True
 
 Standard sensor orientation for AHRS Tait-Bryan angles is X North (yaw=0) Y West and Z Up (NWU system). 
 
-Note that in both cases above**the X-axis is remapped as required to form a right handed coordinate system**. for the 3D fusion filter, North is OPPOSITE to the direction of the "X arrow" on the Adafruit breakout board.
+Note that in both cases above, **the X-axis is reflected as required to form a right handed coordinate system**. for the 3D fusion filter, North is OPPOSITE to the direction of the "X arrow" on the Adafruit breakout board.
 
 The Sparkfun LSM9DS1 Arduino library is required. Only the default settings and raw sensor data are used.
 
