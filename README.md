@@ -2,7 +2,7 @@
 
 Mahony AHRS and Tilt Compensated Compass for Arduino and the LSM9DS1 sensor, written and tested for the Adafruit LSM9DS1 breakout board, using I2C connection on an Arduino Pro Mini.
 
-Standard orientation for the tilt-compensated compass: marked Y axis points True North.  Correct for local magnetic declination is included in the code. Change this by changing the facing vector p in the code.
+Standard orientation for the tilt-compensated compass: marked Y axis points True North.  Correction for the local magnetic declination is included in the code and must be changed to the user's location. One can also change the "North" or Yaw=0 definition by changing the facing vector p in the code.
 
 Standard sensor orientation for AHRS Tait-Bryan angles is X North (yaw=0) Y West and Z Up (NWU system). 
 
