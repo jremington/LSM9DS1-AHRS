@@ -4,7 +4,7 @@ Mahony AHRS and Tilt Compensated Compass for Arduino and the LSM9DS1 sensor, wri
 
 Standard orientation for the tilt-compensated compass: marked Y axis points True North.  Correction for the local magnetic declination is included in the code and must be changed to the user's location. One can also change the "North" or Yaw=0 definition by changing the facing vector p in the code.
 
-Standard sensor orientation for AHRS Tait-Bryan angles is X North (yaw=0) Y West and Z Up (NWU system). 
+Standard sensor orientation for Mahony fusion filter (Tait-Bryan angles) is X North (yaw=0) Y West and Z Up (NWU system). 
 
 Note that in both cases above, **the X-axis is reflected as required to form a right handed coordinate system**. for the 3D fusion filter, North is OPPOSITE to the direction of the "X arrow" on the Adafruit breakout board.
 
