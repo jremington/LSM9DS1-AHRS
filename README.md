@@ -2,7 +2,7 @@
 
 Mahony AHRS and Tilt Compensated Compass for Arduino and the LSM9DS1 sensor, written and tested for the Adafruit LSM9DS1 breakout board, using I2C connection on an Arduino Pro Mini.
 
-**UPDATE March 2021: a new Mahony filter is implemented**, which uses as reference directions **Up** and **West** (acceleration vector cross magnetic field vector), instead of using the unmodified direction of the Earth's magnetic field. It appears to converge more rapidly than the conventional approach as coded by Madgwick, presumably because the reference vectors are orthogonal.
+**UPDATE March 2021: a new Mahony filter is implemented**, which uses as reference directions **Up** and **West** (acceleration vector cross magnetic field vector), instead of using the unmodified direction of the Earth's magnetic field. It appears to converge more rapidly than the conventional Mahony approach (as coded by SOH Madgwick), presumably because the reference vectors are orthogonal.
 
 Standard sensor orientation for Mahony fusion filter (Tait-Bryan angles) is X North (yaw=0) Y West and Z Up (NWU system). 
 
