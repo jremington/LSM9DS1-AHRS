@@ -3,7 +3,7 @@
 // Standard sensor orientation X North (yaw=0), Y West, Z up
 // NOTE: Sensor X axis is remapped to the opposite direction of the "X arrow" on the Adafruit sensor breakout!
 
-// New Mahony filter error scheme uses Up (accel Z axis) and West (= Mag X Acc) as the orientation reference vectors
+// New Mahony filter error scheme uses Up (accel Z axis) and West (= Acc X Mag) as the orientation reference vectors
 
 // Both the accelerometer and magnetometer MUST be properly calibrated for this program to work.
 // Follow the procedure described in http://sailboatinstruments.blogspot.com/2011/08/improved-magnetometer-calibration.html
@@ -132,25 +132,7 @@ void loop()
 
     Axyz[0] = -Axyz[0]; //fix accel/gyro handedness
     Gxyz[0] = -Gxyz[0]; //must be done after offsets & scales applied to raw data
-    /* debug print
-        Serial.print(Gxyz[0]);
-        Serial.print(", ");
-        Serial.print(Gxyz[1]);
-        Serial.print(", ");
-        Serial.print(Gxyz[2]);
-        Serial.print(", ");
-        Serial.print(Axyz[0]);
-        Serial.print(", ");
-        Serial.print(Axyz[1]);
-        Serial.print(", ");
-        Serial.print(Axyz[2]);
-        Serial.print(", ");
-        Serial.print(Mxyz[0]);
-        Serial.print(", ");
-        Serial.print(Mxyz[1]);
-        Serial.print(", ");
-        Serial.println(Mxyz[2]);
-    */
+   
     now = micros();
     deltat = (now - last) * 1.0e-6; //seconds since last update
     last = now;
