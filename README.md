@@ -8,7 +8,7 @@ Standard sensor orientation for Mahony fusion filter (Tait-Bryan angles) is X No
 
 Standard orientation for the tilt-compensated compass: marked Y axis points True North.  Correction for the local magnetic declination is included in the code and must be changed to the user's location. One can also change the "North" or Yaw=0 definition by changing the facing vector p in the code.
 
-Note that in both cases above, **the X-axis is reflected as required to form a right handed coordinate system**. for the 3D fusion filter, North is OPPOSITE to the direction of the "X arrow" on the Adafruit breakout board.
+Note that in both cases above, **the X-axis is reflected as required to form a right handed coordinate system**. For the 3D fusion filter, North is OPPOSITE to the direction of the "X arrow" on the Adafruit breakout board.
 
 The Sparkfun LSM9DS1 Arduino library is required. Only the default settings and raw sensor data are used.
 
