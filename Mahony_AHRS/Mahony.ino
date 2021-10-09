@@ -128,32 +128,17 @@ void loop()
 
     Axyz[0] = -Axyz[0]; //fix accel/gyro handedness
     Gxyz[0] = -Gxyz[0]; //must be done after offsets & scales applied to raw data
-    /* debug print
-        Serial.print(Gxyz[0]);
-        Serial.print(", ");
-        Serial.print(Gxyz[1]);
-        Serial.print(", ");
-        Serial.print(Gxyz[2]);
-        Serial.print(", ");
-        Serial.print(Axyz[0]);
-        Serial.print(", ");
-        Serial.print(Axyz[1]);
-        Serial.print(", ");
-        Serial.print(Axyz[2]);
-        Serial.print(", ");
-        Serial.print(Mxyz[0]);
-        Serial.print(", ");
-        Serial.print(Mxyz[1]);
-        Serial.print(", ");
-        Serial.println(Mxyz[2]);
-    */
+
     now = micros();
     deltat = (now - last) * 1.0e-6; //seconds since last update
     last = now;
 
- //   Gxyz[0] = Gxyz[1] = Gxyz[2] = 0;
     MahonyQuaternionUpdate(Axyz[0], Axyz[1], Axyz[2], Gxyz[0], Gxyz[1], Gxyz[2],
                            Mxyz[0], Mxyz[1], Mxyz[2], deltat);
+    
+// skip ypr calc for speed? (see below)
+//     if (millis() - lastPrint > PRINT_SPEED) {
+
     // Define Tait-Bryan angles.
     // Standard sensor orientation : X magnetic North, Y West, Z Up (NWU)
     // this code corrects for magnetic declination.
@@ -180,6 +165,7 @@ void loop()
     yaw = -(yaw + declination);
     if (yaw < 0) yaw += 360.0;
     if (yaw >= 360.0) yaw -= 360.0;
+// skip ypr printing    
     if (millis() - lastPrint > PRINT_SPEED) {
       Serial.print("ypr ");
       Serial.print(yaw, 0);
