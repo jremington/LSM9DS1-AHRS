@@ -137,7 +137,6 @@ void loop()
     deltat = (now - last) * 1.0e-6; //seconds since last update
     last = now;
 
-    //   Gxyz[0] = Gxyz[1] = Gxyz[2] = 0;
     MahonyQuaternionUpdate(Axyz[0], Axyz[1], Axyz[2], Gxyz[0], Gxyz[1], Gxyz[2],
                            Mxyz[0], Mxyz[1], Mxyz[2], deltat);
 
