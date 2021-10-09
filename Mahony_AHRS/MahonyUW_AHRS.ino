@@ -39,7 +39,7 @@ LSM9DS1 imu;
 
 // VERY IMPORTANT!
 //These are the previously determined offsets and scale factors for accelerometer and magnetometer, using MPU9250_cal and Magneto
-//The compass will NOT work well or at all if these are not correct
+//The filter will produce meaningless results if these data are not correct
 
 //Gyro scale 245 dps convert to radians/sec and offsets
 float Gscale = (M_PI / 180.0) * 0.00875; //245 dps scale sensitivity = 8.75 mdps/LSB
