@@ -4,7 +4,7 @@
 // NOTE: Sensor X axis is remapped to the opposite direction of the "X arrow" on the Adafruit sensor breakout!
 
 // New Mahony filter error scheme uses Up (accel Z axis) and West (= Acc X Mag) as the orientation reference vectors
-
+// heavily modified from http://www.x-io.co.uk/open-source-imu-and-ahrs-algorithms/
 // Both the accelerometer and magnetometer MUST be properly calibrated for this program to work.
 // Follow the procedure described in http://sailboatinstruments.blogspot.com/2011/08/improved-magnetometer-calibration.html
 // or in more detail, the tutorial https://thecavepearlproject.org/2015/05/22/calibrating-any-compass-or-accelerometer-for-arduino/
