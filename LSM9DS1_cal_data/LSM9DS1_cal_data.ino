@@ -37,7 +37,7 @@
 // LSM9DS1 Library Init //
 //////////////////////////
 // default settings gyro  245 d/s, accel = 2g, mag = 4G
-LSM9DS1 imu;.
+LSM9DS1 imu;
 
 ///////////////////////
 // Example I2C Setup //
