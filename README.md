@@ -2,7 +2,7 @@
 
 Mahony AHRS and Tilt Compensated Compass for Arduino and the LSM9DS1 sensor, written and tested for the Adafruit LSM9DS1 breakout board, using I2C connection on an Arduino Pro Mini.
 
-**UPDATE October 2023: Python code for magnetometer and accelerometer added**
+**UPDATE October 2023: Python code for calibrating magnetometer and accelerometer added**, which optionally replaces Magneto (results are identical)
 
 **UPDATE March 2021: a new Mahony filter is implemented**, which uses as reference directions **Up** and **West** (acceleration vector cross magnetic field vector), instead of using the unmodified direction of the Earth's magnetic field. It appears to converge more rapidly than the conventional Mahony approach (as coded by SOH Madgwick), presumably because the reference vectors are orthogonal. See **MahonyUW_AHRS.ino**.
 
