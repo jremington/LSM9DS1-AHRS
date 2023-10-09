@@ -4,13 +4,15 @@ from matplotlib import pyplot as plt
 
  #https://github.com/nliaudat/magnetometer_calibration/blob/main/calibrate.py
  #corrected code S. James Remington, see issue #1 in above contribution.
+ #required data input file: x,y,z values in .csv (text, comma separated value) format.
+ # see example mag3_raw.csv, .out
  
 class Magnetometer(object):
     
     '''
      references :
         -  https://teslabs.com/articles/magnetometer-calibration/      
-        -  https://www.best-microcontroller-projects.com/hmc5883l.html
+        -  https://github.com/nliaudat/magnetometer_calibration/blob/main/calibrate.py
 
     '''
     MField = 1000  #arbitrary norm of magnetic field vectors
